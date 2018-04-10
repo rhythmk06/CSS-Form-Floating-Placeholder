@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS FORM</title>
+    <link href='https://fonts.googleapis.com/css?family=montserrat' rel='stylesheet'>
+</head>
+<style>
+* {
+
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-family: 'montserrat';
+}
+
+.container {
+
+    width: 600px;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px -1px #FFD200;
+}
+
+.address {
+
+    background-color: #3F4711;
+    height: 100px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.regsform {
+
+    background-color: #7D920A;
+    height: 450px;
+    padding-top: 15px;
+    position: relative;
+    font-weight: 300;
+}
+
+form {
+
+    margin: 0px 10px 0px 10px;
+}
+
+form input[type=text] {
+
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 0px;
+    border-radius: 10px;
+    width: 100%;
+    height: 30px;
+    transition: all 0.5s;
+    margin: 15px auto;
+}
+
+form input[type=text]:focus {
+
+    outline: none;
+    box-shadow: 1px 3px 2px #424D05;
+    transition: all 0.5s;
+}
+
+#name {
+    position: absolute;
+    top: 35px;
+    left: 25px;
+    transition: 0.3s all;
+}
+
+input[type=text]:focus+#name,
+input:valid+#name {
+
+    top: 10px;
+    left: 15px;
+    transition: 0.3s all;
+    color: white;
+    font-size: 12px;
+}
+
+#phone {
+    position: absolute;
+    top: 95px;
+    left: 25px;
+    transition: 0.3s all;
+}
+
+input[type=text]:focus+#phone,
+input:valid+#phone {
+
+    top: 70px;
+    left: 15px;
+    transition: 0.3s all;
+    color: white;
+    font-size: 12px;
+}
+
+#email {
+    position: absolute;
+    top: 155px;
+    left: 25px;
+    transition: 0.3s all;
+}
+
+input[type=text]:focus+#email,
+input:valid+#email {
+
+    top: 130px;
+    left: 15px;
+    transition: 0.3s all;
+    color: white;
+    font-size: 12px;
+}
+
+#address {
+    position: absolute;
+    top: 215px;
+    left: 25px;
+    transition: 0.3s all;
+}
+
+input[type=text]:focus+#address,
+input:valid+#address {
+
+    top: 190px;
+    left: 15px;
+    transition: 0.3s all;
+    color: white;
+    font-size: 12px;
+}
+
+textarea {
+
+    padding: 15px 15px 0px 15px;
+    border: 0px;
+    border-radius: 15px;
+    width: 100%;
+    resize: none;
+    border: 0px solid purple;
+}
+
+textarea:focus {
+
+    border: none;
+    outline: none;
+    border: 0px 3px 0px 3px;
+}
+
+
+input[type=button] {
+
+    height: 40px;
+    width: 200px;
+    margin: 10px auto;
+    background-color: black;
+    color: white;
+    border: none;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+input[type=button]:focus {
+
+    outline: none;
+}
+
+input[type=button]:hover {
+
+    background-color: #2C2A2A;
+    cursor: pointer;
+}
+
+/*MEDIA QUERY*/
+
+@media (max-width: 768px) {
+
+    .container {
+
+        width: 80%;
+    }
+}
+</style>
+
+<body>
+    <div class="container">
+        <div class="address">
+            <h3 style="padding-top: 12px">ENQUIRY FORM
+                <br><span style="font-weight: 300">WEB DESIGN & DEVELOPMENT COURSE</span></h3>
+        </div>
+        <div class="regsform">
+            <form>
+                <p>
+                    <input type="text" name="username" required></input>
+                    <label id="name">Name</label>
+                </p>
+                <p>
+                    <input type="text" required="required"></input>
+                    <label id="phone">Phone</label>
+                </p>
+                <p>
+                    <input type="text" required="required"></input>
+                    <label id="email">Email</label>
+                </p>
+                <p>
+                    <input type="text" required="required"></input>
+                    <label id="address">Address</label>
+                </p>
+                <p>
+                    <label style="display: block; text-align: center; color: white">Comments</label>
+                    <textarea rows="5"></textarea>
+                </p>
+                <p>
+                    <input type="button" value="SUBMIT"></input>
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
